@@ -22,7 +22,7 @@ RUN apt-get install git -y
 RUN apt-get install python3-tk -y
 
 #------------ install library for PyTorch
-RUN pip3 install torch torchvision
+#RUN pip3 install torch torchvision
 
 #------------ setup ROS2
 COPY src/setup.sh /root/
