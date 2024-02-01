@@ -9,15 +9,15 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 
 #------------- install ros2
 sudo apt update
-sudo apt install ros-humble-desktop
+sudo apt install ros-humble-desktop -y
 
 #------------- setup ros2
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 #------------- install rosdep and init
-sudo apt install python3-colcon-common-extensions
-sudo apt install python3-rosdep
+sudo apt install python3-colcon-common-extensions -y
+sudo apt install python3-rosdep -y
 sudo rosdep init
 rosdep update
 
@@ -28,7 +28,7 @@ colcon build
 
 #------------- install gazebo and rqt
 sudo apt -y install gazebo
-sudo apt install ros-humble-gazebo-*
-sudo apt install ros-humble-rqt-*
+sudo apt install ros-humble-gazebo-* -y
+sudo apt install ros-humble-rqt-* -y
 
 source ~/.bashrc
