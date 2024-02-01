@@ -1,5 +1,11 @@
 
-FROM ubuntu:22.04
+# ------------ ベースとなるイメージファイル
+FROM nvidia/cuda:12.3.1-devel-ubuntu22.04
+
+# ------------ 環境設定
+ENV LIBRARY_PATH /usr/local/cuda/lib64/stubs
+ENV DISPLAY host.docker.internal:0.0
+ENV DEBIAN_FRONTEND=noninteractive
 
 #------------ set time zone
 RUN apt-get update && apt-get install -y tzdata
@@ -25,5 +31,5 @@ RUN apt-get install python3-tk -y
 #RUN pip3 install torch torchvision
 
 #------------ setup ROS2
-COPY src/setup.sh /root/
+COPY ./src/setup.sh /root/
 RUN bash ~/setup.sh
