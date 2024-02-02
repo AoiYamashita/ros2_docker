@@ -1,3 +1,5 @@
 #!/usr/bin/bash
 
-docker pull ubuntu:22.04
+
+
+sudo docker pull ubuntu:22.04
