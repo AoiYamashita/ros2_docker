@@ -21,6 +21,9 @@ WORKDIR /root
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y python3 python3-pip
 
+#------------ ros2 can't use pip over 58.2.0
+RUN pip install setuptools==58.2.0
+
 #------------ install x11-apps for Xserver on windows
 RUN apt-get install x11-apps -y
 
