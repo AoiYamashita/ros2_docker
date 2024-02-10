@@ -17,7 +17,7 @@ source ~/.bashrc
 
 #------------- install rosdep and init
 apt install python3-colcon-common-extensions -y
-apt install python2-rosdep -y
+apt install python3-rosdep -y
 rosdep init
 rosdep update
 
