@@ -5,8 +5,8 @@
 
 #------------ setup enviroment
 #ENV LIBRARY_PATH /usr/local/cuda/lib64/stubs
-#ENV DISPLAY host.docker.internal:0.0
-#ENV DEBIAN_FRONTEND=noninteractive
+#ENV __NV_PRIME_RENDER_OFFLOAD=1
+#ENV __GLX_VENDOR_LIBRARY_NAME=nvidia
 
 #============ normal ubuntu
 FROM ubuntu:22.04
