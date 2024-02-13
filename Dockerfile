@@ -1,15 +1,15 @@
 
 #------------ base imagefile
 #============ nvidia , can use gpu
-#FROM nvidia/cuda:12.3.1-devel-ubuntu22.04
+FROM nvidia/cuda:12.3.1-devel-ubuntu22.04
 
 #------------ setup enviroment
-#ENV LIBRARY_PATH /usr/local/cuda/lib64/stubs
-#ENV __NV_PRIME_RENDER_OFFLOAD=1
-#ENV __GLX_VENDOR_LIBRARY_NAME=nvidia
+ENV LIBRARY_PATH /usr/local/cuda/lib64/stubs
+ENV __NV_PRIME_RENDER_OFFLOAD=1
+ENV __GLX_VENDOR_LIBRARY_NAME=nvidia
 
 #============ normal ubuntu
-FROM ubuntu:22.04
+#FROM ubuntu:22.04
 
 #------------ set time zone
 RUN apt-get update && apt-get install -y tzdata
