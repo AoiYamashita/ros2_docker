@@ -12,8 +12,8 @@ ENV __GLX_VENDOR_LIBRARY_NAME=nvidia
 #FROM ubuntu:22.04
 
 #------------ set time zone
-RUN apt-get update && apt-get install -y tzdata
 ENV TZ=Asia/Tokyo
+RUN apt-get update && apt-get install -y tzdata
 
 # ----------- set work dir
 WORKDIR /root
