@@ -27,13 +27,12 @@ cd ros2_ws/
 colcon build
 
 #------------- install gazebo and rqt
-apt-get update
-apt-get install lsb-release wget gnupg
-wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
+apt-get install lsb-release wget gnupg -y
+wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg -y
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
-apt-get update
-apt-get install ignition-fortress
-apt install ros-humble-ros-ign 
+apt-get update -y
+apt-get install ignition-fortress -y
+apt install ros-humble-ros-ign -y
 
 #apt -y install gazebo
 #apt install ros-humble-gazebo-* -y
