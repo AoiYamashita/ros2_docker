@@ -38,4 +38,7 @@ apt install ros-humble-ros-ign -y
 #apt install ros-humble-gazebo-* -y
 apt install ros-humble-rqt-* -y
 
+# if ign gazebo do not move, try it
+#export LIBGL_ALWAYS_SOFTWARE=1
+
 source ~/.bashrc
